@@ -1,0 +1,1075 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documenting Your Project Using Sphinx &mdash; Test Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Setuptools integration" href="setuptools.html" />
+    <link rel="prev" title="Welcome to start’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Test Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documenting Your Project Using Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-sphinx">Installing Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-quickstart">Sphinx QuickStart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conf-py"><code class="docutils literal"><span class="pre">conf.py</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restructured-text-rest-resources">reStructured Text (reST) Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bold-italics">Bold/Italics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#headers">Headers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#h1-top-of-page-header">H1 – Top of Page Header</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#h2-page-sections">H2 – Page Sections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#h3-subsection">H3 – Subsection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#h4-subsubsection">H4 – Subsubsection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#a-subpoint">A Subpoint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-subsubpoint">A subsubpoint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slide">slide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documents">Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#substitutions">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="setuptools.html">Setuptools integration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#paragraph-markup">Paragraph Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-cross-referencing-syntax">Python Cross Referencing Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auto-directives">‘Auto’ Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#function-definitions">Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-code-example">Full Code Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="myfile.html">myfile</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#documenting-your-project-using-sphinx">Documenting Your Project Using Sphinx</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Test Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Documenting Your Project Using Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/test.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documenting-your-project-using-sphinx">
+<h1>Documenting Your Project Using Sphinx<a class="headerlink" href="#documenting-your-project-using-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>This covers just a few of the many many commands available via sphinx.  For
+more, visit <a class="reference external" href="http://sphinx.pocoo.org/">http://sphinx.pocoo.org/</a>.</p>
+<p>Also, another great site with just an overview of more common commands is
+<a class="reference external" href="http://docs.geoserver.org/trunk/en/docguide/sphinx.html">http://docs.geoserver.org/trunk/en/docguide/sphinx.html</a>.</p>
+<div class="section" id="installing-sphinx">
+<h2>Installing Sphinx<a class="headerlink" href="#installing-sphinx" title="Permalink to this headline">¶</a></h2>
+<p>Try:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">easy_install</span> <span class="o">-</span><span class="n">U</span> <span class="n">sphinx</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sphinx-quickstart">
+<h2>Sphinx QuickStart<a class="headerlink" href="#sphinx-quickstart" title="Permalink to this headline">¶</a></h2>
+<p>To get started, <code class="docutils literal"><span class="pre">cd</span></code> into the documentation directory and type:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sphinx-quickstart
+
+Please enter values for the following settings
+(just press Enter to accept a default value, if
+one is given in brackets).
+</pre></div>
+</div>
+<p>Here is a list of the default used in this project:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="51%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Prompt</th>
+<th class="head">Choice</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&gt; Root path for the documentation [.]:</td>
+<td>&lt;ENTER&gt;</td>
+</tr>
+<tr class="row-odd"><td>&gt; Separate source and build directories (y/N) [n]:</td>
+<td>y</td>
+</tr>
+<tr class="row-even"><td>&gt; Name prefix for templates and static dir [_]:</td>
+<td>&lt;ENTER&gt;</td>
+</tr>
+<tr class="row-odd"><td>&gt; Project name:</td>
+<td>an_example_pypi_project</td>
+</tr>
+<tr class="row-even"><td>&gt; Author name(s):</td>
+<td>Andrew Carter</td>
+</tr>
+<tr class="row-odd"><td>&gt; Project version:</td>
+<td>0.0.1</td>
+</tr>
+<tr class="row-even"><td>&gt; Project release [0.0.1]:</td>
+<td>&lt;ENTER&gt;</td>
+</tr>
+<tr class="row-odd"><td>&gt; Source file suffix [.rst]:</td>
+<td>&lt;ENTER&gt;</td>
+</tr>
+<tr class="row-even"><td>&gt; Name of your master document (without suffix) [index]:</td>
+<td>&lt;ENTER&gt;</td>
+</tr>
+<tr class="row-odd"><td>&gt; autodoc: automatically insert docstrings from modules (y/N) [n]:</td>
+<td>y</td>
+</tr>
+<tr class="row-even"><td>&gt; doctest: automatically test code snippets in doctest blocks (y/N) [n]:</td>
+<td>n</td>
+</tr>
+<tr class="row-odd"><td>&gt; intersphinx: link between Sphinx documentation of different projects (y/N) [n]:</td>
+<td>y</td>
+</tr>
+<tr class="row-even"><td>&gt; todo: write “todo” entries that can be shown or hidden on build (y/N) [n]:</td>
+<td>n</td>
+</tr>
+<tr class="row-odd"><td>&gt; coverage: checks for documentation coverage (y/N) [n]:</td>
+<td>n</td>
+</tr>
+<tr class="row-even"><td>&gt; pngmath: include math, rendered as PNG images (y/N) [n]:</td>
+<td>n</td>
+</tr>
+<tr class="row-odd"><td>&gt; jsmath: include math, rendered in the browser by JSMath (y/N) [n]:</td>
+<td>n</td>
+</tr>
+<tr class="row-even"><td>&gt; ifconfig: conditional inclusion of content based on config values (y/N) [n]:</td>
+<td>y</td>
+</tr>
+<tr class="row-odd"><td>&gt; Create Makefile? (Y/n) [y]:</td>
+<td>n</td>
+</tr>
+<tr class="row-even"><td>&gt; Create Windows command file? (Y/n) [y]:</td>
+<td>n</td>
+</tr>
+</tbody>
+</table>
+<p>Then you should get:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Finished</span><span class="p">:</span> <span class="n">An</span> <span class="n">initial</span> <span class="n">directory</span> <span class="n">structure</span> <span class="n">has</span> <span class="n">been</span> <span class="n">created</span><span class="o">.</span>
+
+<span class="n">You</span> <span class="n">should</span> <span class="n">now</span> <span class="n">populate</span> <span class="n">your</span> <span class="n">master</span> <span class="n">file</span> <span class="o">.</span>\<span class="n">source</span>\<span class="n">index</span><span class="o">.</span><span class="n">rst</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">other</span> <span class="n">documentation</span>
+<span class="n">source</span> <span class="n">files</span><span class="o">.</span> <span class="n">Use</span> <span class="n">the</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="n">command</span> <span class="n">to</span> <span class="n">build</span> <span class="n">the</span> <span class="n">docs</span><span class="p">,</span> <span class="n">like</span> <span class="n">so</span><span class="p">:</span>
+   <span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">builder</span> <span class="o">.</span>\<span class="n">source</span> <span class="o">.</span>\<span class="n">build</span>
+<span class="n">where</span> <span class="s2">&quot;builder&quot;</span> <span class="ow">is</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">supported</span> <span class="n">builders</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">html</span><span class="p">,</span> <span class="n">latex</span> <span class="ow">or</span> <span class="n">linkcheck</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conf-py">
+<h2><code class="docutils literal"><span class="pre">conf.py</span></code><a class="headerlink" href="#conf-py" title="Permalink to this headline">¶</a></h2>
+<p>In your <code class="docutils literal"><span class="pre">doc/source</span></code> directory is now a python file called <code class="docutils literal"><span class="pre">conf.py</span></code>.</p>
+<p>This is the file that controls the basics of how sphinx runs when you run a
+build.  Here you can do this like:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Change the version/release number by setting the <code class="docutils literal"><span class="pre">version</span></code> and <code class="docutils literal"><span class="pre">release</span></code>
+variables.</li>
+<li>Set the project name and author name.</li>
+<li>Setup a project logo.</li>
+<li>Set the default style to <code class="docutils literal"><span class="pre">sphinx</span></code> or <code class="docutils literal"><span class="pre">default</span></code>.  Default is what
+the standard python docs use.</li>
+</ul>
+</div></blockquote>
+<p>and much much more.  Browsing through this file will give you an understanding
+of the basics.</p>
+</div>
+<div class="section" id="restructured-text-rest-resources">
+<h2>reStructured Text (reST) Resources<a class="headerlink" href="#restructured-text-rest-resources" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx is built of reStructured text and, when using sphinx most of what you
+type is reStructured text.  Some great resources are below (and most examples
+are ripped out of these pages):</p>
+<ul class="simple">
+<li><a class="reference external" href="http://docutils.sourceforge.net/rst.html">http://docutils.sourceforge.net/rst.html</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">http://docutils.sourceforge.net/docs/user/rst/quickref.html</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt">http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt</a></li>
+</ul>
+</div>
+<div class="section" id="bold-italics">
+<h2>Bold/Italics<a class="headerlink" href="#bold-italics" title="Permalink to this headline">¶</a></h2>
+<p>Bold and italics are done like this:</p>
+<blockquote>
+<div><strong>bold</strong> and <em>italics</em></div></blockquote>
+</div>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>A thing.</li>
+<li>Another thing.</li>
+</ul>
+<p>or</p>
+<ol class="arabic simple">
+<li>Item 1.</li>
+<li>Item 2.</li>
+<li>Item 3.</li>
+</ol>
+<p>or</p>
+<ul class="simple">
+<li>Some.</li>
+<li>Thing.</li>
+<li>Different.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="headers">
+<h2>Headers<a class="headerlink" href="#headers" title="Permalink to this headline">¶</a></h2>
+<p>It’s up to you to pick a convention for headers and just stick with it –
+Sphinx will pick up on your convention:</p>
+<p>You can do whatever header stragetgy you want, but I think a good one is:</p>
+</div>
+</div>
+<div class="section" id="h1-top-of-page-header">
+<h1>H1 – Top of Page Header<a class="headerlink" href="#h1-top-of-page-header" title="Permalink to this headline">¶</a></h1>
+<p>There should only be one of these per page and this will also – when
+converting to pdf – be used for the chapters.</p>
+<div class="section" id="h2-page-sections">
+<h2>H2 – Page Sections<a class="headerlink" href="#h2-page-sections" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="h3-subsection">
+<h3>H3 – Subsection<a class="headerlink" href="#h3-subsection" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="h4-subsubsection">
+<h4>H4 – Subsubsection<a class="headerlink" href="#h4-subsubsection" title="Permalink to this headline">¶</a></h4>
+<p>So:</p>
+</div>
+</div>
+<div class="section" id="a-subpoint">
+<h3>A Subpoint<a class="headerlink" href="#a-subpoint" title="Permalink to this headline">¶</a></h3>
+<p>This is my idea.</p>
+<div class="section" id="a-subsubpoint">
+<h4>A subsubpoint<a class="headerlink" href="#a-subsubpoint" title="Permalink to this headline">¶</a></h4>
+<p>This is a smaller idea.</p>
+</div>
+</div>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<p>Basic tables are done like this:</p>
+<blockquote>
+<div><p>COMPLEX TABLE:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+<p>SIMPLE TABLE:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr class="row-even"><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr class="row-odd"><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr class="row-even"><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<p>Urls are automatically linked, like <a class="reference external" href="http://packages.python.org/an_example_pypi_project/">http://packages.python.org/an_example_pypi_project/</a></p>
+<p>To add a text with a hyperlink, I like using this format:</p>
+<blockquote>
+<div><a class="reference external" href="http://packages.python.org/an_example_pypi_project/">Docs for this project</a>.</div></blockquote>
+<p>To create an anchor link that jumps to another section in the
+same .rst file, use this syntax:</p>
+<blockquote>
+<div><a class="reference internal" href="#table-of-contents">Table of Contents</a></div></blockquote>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>Images syntax is like this:</p>
+<blockquote>
+<div><div class="figure align-center" id="id1">
+<img alt="_images/sweat.jpg" src="_images/sweat.jpg" />
+<p class="caption"><span class="caption-text">Proof that getting rich is mostly luck.</span></p>
+</div>
+</div></blockquote>
+<p>You can also add an anchor point for an image like this:</p>
+<blockquote>
+<div><div class="figure align-center" id="id2">
+<span id="is-sweaty"></span><img alt="_images/sweat.jpg" src="_images/sweat.jpg" />
+<p class="caption"><span class="caption-text">Proof that getting rich is mostly luck.</span></p>
+</div>
+</div></blockquote>
+<p>Now you can reference this anchor like this:</p>
+<p>This picture <a class="reference internal" href="#is-sweaty">is_sweaty</a>.</p>
+</div>
+<div class="section" id="slide">
+<h2>slide<a class="headerlink" href="#slide" title="Permalink to this headline">¶</a></h2>
+<p>here is slide from slideshare:</p>
+<blockquote>
+<div></div></blockquote>
+</div>
+<div class="section" id="documents">
+<h2>Documents<a class="headerlink" href="#documents" title="Permalink to this headline">¶</a></h2>
+<p><code class="xref download docutils literal"><span class="pre">An</span> <span class="pre">Example</span> <span class="pre">Pypi</span> <span class="pre">Project</span></code>.</p>
+<p>See</p>
+<p><a class="reference download internal" href="_downloads/example.py" download=""><code class="xref download docutils literal"><span class="pre">this</span> <span class="pre">example</span> <span class="pre">script</span></code></a>.</p>
+<p>PDF</p>
+<p><a class="reference download internal" href="_downloads/example.pdf" download=""><code class="xref download docutils literal"><span class="pre">this</span> <span class="pre">example</span> <span class="pre">pdf</span></code></a>.</p>
+</div>
+<div class="section" id="substitutions">
+<h2>Substitutions<a class="headerlink" href="#substitutions" title="Permalink to this headline">¶</a></h2>
+<p>Substitutions is :</p>
+<blockquote>
+<div>The <img alt="biohazard" src="_images/biohazard.png" /> symbol must be used on containers used to dispose of medical waste.</div></blockquote>
+<p>Or if you want to do a literal text replacement :</p>
+<blockquote>
+<div>I really like <code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code>.</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Substitutions are really useful, especially when put into a <code class="docutils literal"><span class="pre">global.rst</span></code>
+and included at the top of every file.  See <a class="reference internal" href="#includes">Includes</a> below for more.</p>
+</div>
+</div>
+<div class="section" id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<p>The syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">include</span> <span class="n">myfile</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>Will ‘inline’ the given file.  A common convention I use is create a global
+.rst file called <code class="docutils literal"><span class="pre">global.rst</span></code> and include that at the top of every page.
+Very useful for links to common images or common files links, etc.</p>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<p>Using the syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">2</span>
+
+   <span class="n">setuptools</span>
+   <span class="n">buildanduploadsphinx</span>
+</pre></div>
+</div>
+<p>renders like this:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setuptools.html">Setuptools integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setuptools.html#using-setuptools-integration">Using setuptools integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setuptools.html#options-for-setuptools-integration">Options for setuptools integration</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>where <code class="docutils literal"><span class="pre">setuptools</span></code>, <code class="docutils literal"><span class="pre">sphinx</span></code>, etc. correspond to <code class="docutils literal"><span class="pre">setuptools.rst</span></code> and
+<code class="docutils literal"><span class="pre">sphinx.rst</span></code> files in the local path.</p>
+</div>
+<div class="section" id="paragraph-markup">
+<h2>Paragraph Markup<a class="headerlink" href="#paragraph-markup" title="Permalink to this headline">¶</a></h2>
+<p>To bring attention to a section of text, use paragraphs level markups.</p>
+<p>Important constructs include:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">note</span><span class="p">::</span>
+
+<span class="o">..</span> <span class="n">warning</span><span class="p">::</span>
+
+<span class="o">..</span> <span class="n">versionadded</span><span class="p">::</span> <span class="n">version</span>
+
+<span class="o">..</span> <span class="n">versionchanged</span><span class="p">::</span> <span class="n">version</span>
+
+<span class="o">..</span> <span class="n">seealso</span><span class="p">::</span>
+</pre></div>
+</div>
+<p>The way you would use this is as follows:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>Never, ever, use this code!</p>
+<p class="last">This is a statement.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Never, ever, use this code!</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.0.2.</span></p>
+</div>
+<div class="admonition seealso">
+<p class="first last admonition-title">See also</p>
+</div>
+<p>Now it is okay to use this code.</p>
+<p>For full Sphinx docs on paragraph markup, check out
+<a class="reference external" href="http://sphinx.pocoo.org/markup/para.html">http://sphinx.pocoo.org/markup/para.html</a>.</p>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>Python code in sphinx is easy.  Because we turned <code class="xref py py-mod docutils literal"><span class="pre">pygments</span></code> on, all we
+need to do is use the <code class="docutils literal"><span class="pre">::</span></code> operator at the end of a line. So:</p>
+<p>Here is something I want to talk about:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_fn</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A really useful function.</span>
+
+<span class="sd">    Returns None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Also you can use the <code class="docutils literal"><span class="pre">::</span></code> operator to basically render any text exactly using
+fixed width fonts and by passing the restructured text engine.
+This is useful for ascii art:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>       .,,.
+     ,;;*;;;;,
+    .-&#39;``;-&#39;);;.
+   /&#39;  .-.  /*;;
+ .&#39;    \d    \;;               .;;;,
+/ o      `    \;    ,__.     ,;*;;;*;,
+\__, _.__,&#39;   \_.-&#39;) __)--.;;;;;*;;;;,
+ `&quot;&quot;`;;;\       /-&#39;)_) __)  `\&#39; &#39;;;;;;;
+    ;*;;;        -&#39;) `)_)  |\ |  ;;;;*;
+    ;;;;|        `---`    O | | ;;*;;;
+    *;*;\|                 O  / ;;;;;*
+   ;;;;;/|    .-------\      / ;*;;;;;
+  ;;;*;/ \    |        &#39;.   (`. ;;;*;;;
+  ;;;;;&#39;. ;   |          )   \ | ;;;;;;
+  ,;*;;;;\/   |.        /   /` | &#39;;;;*;
+   ;;;;;;/    |/       /   /__/   &#39;;;;
+   &#39;*jgs/     |       /    |      ;*;
+        `&quot;&quot;&quot;&quot;`        `&quot;&quot;&quot;&quot;`     ;&#39;
+</pre></div>
+</div>
+<p>Also, you can add “inline” code by using the fixed-font operator.</p>
+<p>By using two <code class="docutils literal"><span class="pre">``</span></code> marks like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This is inline ``if __name__ == &#39;__main__&#39;:``
+</pre></div>
+</div>
+<p>you get:</p>
+<p>This is inline <code class="docutils literal"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__':</span></code></p>
+<p>Here is something Java</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">HelloWorld</span> <span class="p">{</span>
+
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="o">//</span> <span class="n">Creates</span> <span class="n">a</span> <span class="n">reader</span> <span class="n">instance</span> <span class="n">which</span> <span class="n">takes</span>
+        <span class="o">//</span> <span class="nb">input</span> <span class="kn">from</span> <span class="nn">standard</span> <span class="nb">input</span> <span class="o">-</span> <span class="n">keyboard</span>
+        <span class="n">Scanner</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">nextInt</span><span class="p">()</span> <span class="n">reads</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">integer</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">keyboard</span>
+        <span class="nb">int</span> <span class="n">number</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">nextInt</span><span class="p">();</span>
+
+        <span class="o">//</span> <span class="n">println</span><span class="p">()</span> <span class="n">prints</span> <span class="n">the</span> <span class="n">following</span> <span class="n">line</span> <span class="n">to</span> <span class="n">the</span> <span class="n">output</span> <span class="n">screen</span>
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;You entered: &quot;</span> <span class="o">+</span> <span class="n">number</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is some C code</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="nb">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nb">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">gcd</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Enter two integers: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n2</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Checks</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">is</span> <span class="n">factor</span> <span class="n">of</span> <span class="n">both</span> <span class="n">integers</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">n1</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">n2</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">gcd</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;G.C.D of </span><span class="si">%d</span><span class="s2"> and </span><span class="si">%d</span><span class="s2"> is </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">gcd</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is Ruby code ON STRING OPERATION</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">8</span> <span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;sam&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mf">98.9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;jill&#39;</span> <span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span> <span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">57</span> <span class="o">&lt;&lt;</span> <span class="mi">9</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;phil&#39;</span>
+<span class="nb">print</span> <span class="s2">&quot;A: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+<span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;alex&#39;</span> <span class="o">&lt;&lt;</span> <span class="mi">48</span> <span class="o">&lt;&lt;</span> <span class="mi">220</span>
+<span class="nb">print</span> <span class="s2">&quot;B: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span> <span class="s2">&quot;pop: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">pop</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span> <span class="s2">&quot;shift: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">shift</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span> <span class="s2">&quot;C: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+<span class="n">b</span><span class="o">.</span><span class="n">delete_at</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;alex&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="s2">&quot;D: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-cross-referencing-syntax">
+<h2>Python Cross Referencing Syntax<a class="headerlink" href="#python-cross-referencing-syntax" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx makes it easy to quickly link to other code definitions that
+<em>are in the python path</em> or can be found by <code class="xref py py-mod docutils literal"><span class="pre">intersphinx</span></code>.</p>
+<p>The major ones I use all the time are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">:mod:</span></code></li>
+<li><code class="docutils literal"><span class="pre">:func:</span></code></li>
+<li><code class="docutils literal"><span class="pre">:class:</span></code></li>
+</ul>
+<p>Which is used like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>I really like the :mod:`threading` module which has the
+:class:`threading.Thread` class.
+
+Here is a link :func:`time.time`.
+</pre></div>
+</div>
+<p>which renders like this:</p>
+<p>I really like the <code class="xref py py-mod docutils literal"><span class="pre">threading</span></code> module which has the
+<code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code> class.</p>
+<p>Here is a link <code class="xref py py-func docutils literal"><span class="pre">time.time()</span></code>.</p>
+<p>For more, visit <a class="reference external" href="http://sphinx.pocoo.org/markup/inline.html">http://sphinx.pocoo.org/markup/inline.html</a>.</p>
+</div>
+<div class="section" id="auto-directives">
+<h2>‘Auto’ Directives<a class="headerlink" href="#auto-directives" title="Permalink to this headline">¶</a></h2>
+<p>From the sphinx docs directly:</p>
+<p><code class="xref py py-mod docutils literal"><span class="pre">sphinx.ext.autodoc</span></code> – Include documentation from docstrings</p>
+<p>This extension can import the modules you are documenting, and pull in
+documentation from docstrings in a semi-automatic way.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For Sphinx (actually, the Python interpreter that executes Sphinx) to find
+your module, it must be importable.  That means that the module or the
+package must be in one of the directories on <code class="xref py py-data docutils literal"><span class="pre">sys.path</span></code> – adapt your
+<code class="xref py py-data docutils literal"><span class="pre">sys.path</span></code> in the configuration file accordingly.</p>
+</div>
+<p>For this to work, the docstrings must of course be written in correct
+reStructuredText.  You can then use all of the usual Sphinx markup in the
+docstrings, and it will end up correctly in the documentation.  Together with
+hand-written documentation, this technique eases the pain of having to maintain
+two locations for documentation, while at the same time avoiding
+auto-generated-looking pure API documentation.</p>
+<p>For more on autodoc see <a class="reference external" href="http://sphinx.pocoo.org/ext/autodoc.html">http://sphinx.pocoo.org/ext/autodoc.html</a>.</p>
+<p>The main autodoc features I use are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">..</span> <span class="pre">automodule::</span> <span class="pre">&lt;module_name&gt;</span></code></li>
+<li><code class="docutils literal"><span class="pre">..</span> <span class="pre">autoclass::</span> <span class="pre">&lt;class_name&gt;</span></code> and</li>
+<li><code class="docutils literal"><span class="pre">..</span> <span class="pre">autofunction::</span> <span class="pre">&lt;function_name&gt;</span></code></li>
+</ul>
+<p>The key to using these features is the <code class="docutils literal"><span class="pre">:members:</span></code> attribute.  If:</p>
+<ul class="simple">
+<li>You don’t include it at all, only the docstring for the object is brought in:</li>
+<li>You just use <code class="docutils literal"><span class="pre">:members:</span></code> with no arguments, then all public functions,
+classes, and methods are brought it that have docstring.</li>
+<li>If you explictly list the members like <code class="docutils literal"><span class="pre">:members:</span> <span class="pre">fn0,</span> <span class="pre">class0,</span> <span class="pre">_fn1</span></code>
+those explict members are brought.</li>
+</ul>
+<p>We’ll examine these points in the full example <a class="reference internal" href="#full-code-example">Full Code Example</a>.</p>
+</div>
+<div class="section" id="function-definitions">
+<h2>Function Definitions<a class="headerlink" href="#function-definitions" title="Permalink to this headline">¶</a></h2>
+<p>Function doc strings deserve a mention.  The sphinx syntax (taken from
+<a class="reference external" href="http://sphinx.pocoo.org/markup/desc.html">http://sphinx.pocoo.org/markup/desc.html</a>) looks like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">function</span><span class="p">::</span> <span class="n">format_exception</span><span class="p">(</span><span class="n">etype</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">[,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">])</span>
+
+   <span class="n">Format</span> <span class="n">the</span> <span class="n">exception</span> <span class="k">with</span> <span class="n">a</span> <span class="n">traceback</span><span class="o">.</span>
+
+   <span class="p">:</span><span class="n">param</span> <span class="n">etype</span><span class="p">:</span> <span class="n">exception</span> <span class="nb">type</span>
+   <span class="p">:</span><span class="n">param</span> <span class="n">value</span><span class="p">:</span> <span class="n">exception</span> <span class="n">value</span>
+   <span class="p">:</span><span class="n">param</span> <span class="n">tb</span><span class="p">:</span> <span class="n">traceback</span> <span class="nb">object</span>
+   <span class="p">:</span><span class="n">param</span> <span class="n">limit</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">number</span> <span class="n">of</span> <span class="n">stack</span> <span class="n">frames</span> <span class="n">to</span> <span class="n">show</span>
+   <span class="p">:</span><span class="nb">type</span> <span class="n">limit</span><span class="p">:</span> <span class="n">integer</span> <span class="ow">or</span> <span class="kc">None</span>
+   <span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">strings</span>
+</pre></div>
+</div>
+<p>which renders like this:</p>
+<dl class="function">
+<dt id="format_exception">
+<code class="descname">format_exception</code><span class="sig-paren">(</span><em>etype</em>, <em>value</em>, <em>tb</em><span class="optional">[</span>, <em>limit=None</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#format_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the exception with a traceback.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>etype</strong> – exception type</li>
+<li><strong>value</strong> – exception value</li>
+<li><strong>tb</strong> – traceback object</li>
+<li><strong>limit</strong> (<em>integer</em><em> or </em><em>None</em>) – maximum number of stack frames to show</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list of strings</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p>However, this can be a bit hard to read in the docstring itself (one line of
+thinking is that the sphinx markup shouldn’t kill the docstring that a user
+might read through the <code class="docutils literal"><span class="pre">__doc__</span></code> attribute).  In fact the
+google style guide <a class="reference external" href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html">http://google-styleguide.googlecode.com/svn/trunk/pyguide.html</a>
+says doc string should look like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fetch_bigtable_rows</span><span class="p">(</span><span class="n">big_table</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">other_silly_variable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Fetches rows from a Bigtable.</span>
+
+<span class="sd">    Retrieves rows pertaining to the given keys from the Table instance</span>
+<span class="sd">    represented by big_table.  Silly things may happen if</span>
+<span class="sd">    other_silly_variable is not None.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        big_table: An open Bigtable Table instance.</span>
+<span class="sd">        keys: A sequence of strings representing the key of each table row</span>
+<span class="sd">            to fetch.</span>
+<span class="sd">        other_silly_variable: Another optional variable, that has a much</span>
+<span class="sd">            longer name than the other args, and which does nothing.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A dict mapping keys to the corresponding table row data</span>
+<span class="sd">        fetched. Each row is represented as a tuple of strings. For</span>
+<span class="sd">        example:</span>
+
+<span class="sd">        {&#39;Serak&#39;: (&#39;Rigel VII&#39;, &#39;Preparer&#39;),</span>
+<span class="sd">         &#39;Zim&#39;: (&#39;Irk&#39;, &#39;Invader&#39;),</span>
+<span class="sd">         &#39;Lrrr&#39;: (&#39;Omicron Persei 8&#39;, &#39;Emperor&#39;)}</span>
+
+<span class="sd">        If a key from the keys argument is missing from the dictionary,</span>
+<span class="sd">        then that row was not found in the table.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        IOError: An error occurred accessing the bigtable.Table object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>which I think is a lot cleaner when you just look at the docstring.  It won’t
+have the pretty sphinx formatting however.  We’ll see another example in
+<a class="reference internal" href="#full-code-example">Full Code Example</a> below.</p>
+</div>
+<div class="section" id="full-code-example">
+<h2>Full Code Example<a class="headerlink" href="#full-code-example" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="xref py py-mod docutils literal"><span class="pre">an_example_pypi_project</span></code> contains</p>
+<ul class="simple">
+<li>An <code class="docutils literal"><span class="pre">__init__</span></code> file for the module.</li>
+<li><code class="docutils literal"><span class="pre">useful_1.py</span></code> and <code class="docutils literal"><span class="pre">useful_2.py</span></code>.  These files are IDENTICAL so I’ll only
+reprint one here.</li>
+<li>The <code class="docutils literal"><span class="pre">code.rst</span></code> file which pulls it all together. This file lives in the doc
+directory.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The idea behind the <code class="docutils literal"><span class="pre">auto</span></code> directives is to keep as much documentation in
+the code docstrings as possible.  However, Sphinx still aims to give you
+control not found when using real auto tools like doxygen or epydoc.</p>
+<p class="last">Therefore, that is why you need the small stub file <code class="docutils literal"><span class="pre">code.rst</span></code> to bascially
+act as a director for pulling the docstrings from the code.</p>
+</div>
+<p>Contents of <code class="docutils literal"><span class="pre">an_example_pypi_project.__init__</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;A pypi demonstration vehicle.</span>
+
+<span class="sd">.. moduleauthor:: Andrew Carter &lt;andrew@invalid.com&gt;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">useful_1</span>
+<span class="kn">import</span> <span class="nn">useful_2</span>
+
+
+<span class="k">def</span> <span class="nf">start</span><span class="p">():</span>
+    <span class="s2">&quot;This starts this module running ...&quot;</span>
+</pre></div>
+</div>
+<p>Contents of <code class="docutils literal"><span class="pre">an_example_pypi_project.useful_1</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">.. module:: useful_1</span>
+<span class="sd">   :platform: Unix, Windows</span>
+<span class="sd">   :synopsis: A useful module indeed.</span>
+
+<span class="sd">.. moduleauthor:: Andrew Carter &lt;andrew@invalid.com&gt;</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">public_fn_with_googley_docstring</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function does something.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">       name (str):  The name to use.</span>
+
+<span class="sd">    Kwargs:</span>
+<span class="sd">       state (bool): Current state to be in.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">       int.  The return code::</span>
+
+<span class="sd">          0 -- Success!</span>
+<span class="sd">          1 -- No good.</span>
+<span class="sd">          2 -- Try again.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">       AttributeError, KeyError</span>
+
+<span class="sd">    A really great idea.  A way you might use me is</span>
+
+<span class="sd">    &gt;&gt;&gt; print public_fn_with_googley_docstring(name=&#39;foo&#39;, state=None)</span>
+<span class="sd">    0</span>
+
+<span class="sd">    BTW, this always returns 0.  **NEVER** use with :class:`MyPublicClass`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">public_fn_with_sphinxy_docstring</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This function does something.</span>
+
+<span class="sd">    :param name: The name to use.</span>
+<span class="sd">    :type name: str.</span>
+<span class="sd">    :param state: Current state to be in.</span>
+<span class="sd">    :type state: bool.</span>
+<span class="sd">    :returns:  int -- the return code.</span>
+<span class="sd">    :raises: AttributeError, KeyError</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">public_fn_without_docstring</span><span class="p">():</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">_private_fn_with_docstring</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="n">foobarbas</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;I have a docstring, but won&#39;t be imported if you just use ``:members:``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="k">class</span> <span class="nc">MyPublicClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;We use this as a public class example class.</span>
+
+<span class="sd">    You never call this class before calling :func:`public_fn_with_sphinxy_docstring`.</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">       An example of intersphinx is this: you **cannot** use :mod:`pickle` on this class.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="s1">&#39;baz&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A really simple class.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">           foo (str): We all know what foo does.</span>
+
+<span class="sd">        Kwargs:</span>
+<span class="sd">           bar (str): Really, same as foo.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_foo</span> <span class="o">=</span> <span class="n">foo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bar</span> <span class="o">=</span> <span class="n">bar</span>
+
+    <span class="k">def</span> <span class="nf">get_foobar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This gets the foobar</span>
+
+<span class="sd">        This really should have a full function definition, but I am too lazy.</span>
+
+<span class="sd">        &gt;&gt;&gt; print get_foobar(10, 20)</span>
+<span class="sd">        30</span>
+<span class="sd">        &gt;&gt;&gt; print get_foobar(&#39;a&#39;, &#39;b&#39;)</span>
+<span class="sd">        ab</span>
+
+<span class="sd">        Isn&#39;t that what you want?</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">foo</span> <span class="o">+</span> <span class="n">bar</span>
+
+    <span class="k">def</span> <span class="nf">_get_baz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">baz</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A private function to get baz.</span>
+
+<span class="sd">        This really should have a full function definition, but I am too lazy.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">baz</span>
+</pre></div>
+</div>
+<p>And finally, contents of <code class="docutils literal"><span class="pre">code.rst</span></code> which pulls it all together:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Documentation</span> <span class="k">for</span> <span class="n">the</span> <span class="n">Code</span>
+<span class="o">**************************</span>
+
+<span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">an_example_pypi_project</span>
+
+
+<span class="n">useful</span> <span class="c1">#1 -- auto members</span>
+<span class="o">=========================</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">say</span> <span class="n">that</span> <span class="ow">is</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">docstring</span><span class="o">.</span>
+
+<span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">an_example_pypi_project</span><span class="o">.</span><span class="n">useful_1</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+
+<span class="n">useful</span> <span class="c1">#2 -- explicit members</span>
+<span class="o">=============================</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">I</span> <span class="n">want</span> <span class="n">to</span> <span class="n">say</span> <span class="n">that</span> <span class="ow">is</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">docstring</span><span class="o">.</span>
+
+<span class="o">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">an_example_pypi_project</span><span class="o">.</span><span class="n">useful_2</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span> <span class="n">public_fn_with_sphinxy_docstring</span><span class="p">,</span> <span class="n">_private_fn_with_docstring</span>
+
+<span class="o">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">MyPublicClass</span>
+   <span class="p">:</span><span class="n">members</span><span class="p">:</span> <span class="n">get_foobar</span><span class="p">,</span> <span class="n">_get_baz</span>
+</pre></div>
+</div>
+<p>When you’re done, you get <span class="xref std std-doc">pkgcode</span>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="setuptools.html" class="btn btn-neutral float-right" title="Setuptools integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to start’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Lyudmil Vladimirov
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

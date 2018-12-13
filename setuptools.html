@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Setuptools integration &mdash; Test Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="myfile" href="myfile.html" />
+    <link rel="prev" title="Documenting Your Project Using Sphinx" href="test.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Test Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="test.html">Documenting Your Project Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html#h1-top-of-page-header">H1 – Top of Page Header</a></li>
+<li class="toctree-l1"><a class="reference internal" href="myfile.html">myfile</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tutorial.html#documenting-your-project-using-sphinx">Documenting Your Project Using Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#installing-sphinx">Installing Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#sphinx-quickstart">Sphinx QuickStart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#conf-py"><code class="docutils literal"><span class="pre">conf.py</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#restructured-text-rest-resources">reStructured Text (reST) Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#bold-italics">Bold/Italics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#lists">Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#headers">Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#tables">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#links">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#documents">Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#substitutions">Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#includes">Includes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tutorial.html#table-of-contents">Table of Contents</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Setuptools integration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-setuptools-integration">Using setuptools integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options-for-setuptools-integration">Options for setuptools integration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#paragraph-markup">Paragraph Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#python-cross-referencing-syntax">Python Cross Referencing Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#auto-directives">‘Auto’ Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#function-definitions">Function Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#full-code-example">Full Code Example</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Test Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="test.html">Documenting Your Project Using Sphinx</a> &raquo;</li>
+        
+      <li>Setuptools integration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/setuptools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setuptools-integration">
+<span id="setuptools"></span><h1>Setuptools integration<a class="headerlink" href="#setuptools-integration" title="Permalink to this headline">¶</a></h1>
+<p>Sphinx supports integration with setuptools and distutils through a custom
+command - <code class="xref py py-class docutils literal"><span class="pre">BuildDoc</span></code>.</p>
+<div class="section" id="using-setuptools-integration">
+<h2>Using setuptools integration<a class="headerlink" href="#using-setuptools-integration" title="Permalink to this headline">¶</a></h2>
+<p>The Sphinx build can then be triggered from distutils, and some Sphinx
+options can be set in <code class="docutils literal"><span class="pre">setup.py</span></code> or <code class="docutils literal"><span class="pre">setup.cfg</span></code> instead of Sphinx’s own
+configuration file.</p>
+<p>For instance, from <code class="docutils literal"><span class="pre">setup.py</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># this is only necessary when not using setuptools/distribute</span>
+<span class="kn">from</span> <span class="nn">sphinx.setup_command</span> <span class="k">import</span> <span class="n">BuildDoc</span>
+<span class="n">cmdclass</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;build_sphinx&#39;</span><span class="p">:</span> <span class="n">BuildDoc</span><span class="p">}</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;My project&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2&#39;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;1.2.0&#39;</span>
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s1">&#39;Bernard Montgomery&#39;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">release</span><span class="p">,</span>
+    <span class="n">cmdclass</span><span class="o">=</span><span class="n">cmdclass</span><span class="p">,</span>
+    <span class="c1"># these are optional and override conf.py settings</span>
+    <span class="n">command_options</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;build_sphinx&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;project&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span>
+            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="n">version</span><span class="p">),</span>
+            <span class="s1">&#39;release&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="n">release</span><span class="p">),</span>
+            <span class="s1">&#39;source_dir&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">,</span> <span class="s1">&#39;doc&#39;</span><span class="p">)}},</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you set Sphinx options directly in the <code class="docutils literal"><span class="pre">setup()</span></code> command, replace
+hyphens in variable names with underscores. In the example above,
+<code class="docutils literal"><span class="pre">source-dir</span></code> becomes <code class="docutils literal"><span class="pre">source_dir</span></code>.</p>
+</div>
+<p>Or add this section in <code class="docutils literal"><span class="pre">setup.cfg</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">build_sphinx</span><span class="p">]</span>
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;My project&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">release</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">source</span><span class="o">-</span><span class="nb">dir</span> <span class="o">=</span> <span class="s1">&#39;doc&#39;</span>
+</pre></div>
+</div>
+<p>Once configured, call this by calling the relevant command on <code class="docutils literal"><span class="pre">setup.py</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python setup.py build_sphinx
+</pre></div>
+</div>
+</div>
+<div class="section" id="options-for-setuptools-integration">
+<h2>Options for setuptools integration<a class="headerlink" href="#options-for-setuptools-integration" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="myfile.html" class="btn btn-neutral float-right" title="myfile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="test.html" class="btn btn-neutral" title="Documenting Your Project Using Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Lyudmil Vladimirov
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
